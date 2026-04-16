@@ -89,7 +89,7 @@ def person(
             end = m.end_date or "present"
             typer.echo(
                 f"  [{status}] {m.role} @ {m.company.name} "
-                f"({m.company.siren}) — {start} → {end}"
+                f"({m.company.siren}) -- {start} -> {end}"
             )
 
 
