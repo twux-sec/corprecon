@@ -225,10 +225,10 @@ class TestCrossMandates:
 
         with (
             patch(
-                "corprecon.crosser.insee.search_by_siren", mock_siren
+                "corprecon.crosser.annuaire.get_company", mock_siren
             ),
             patch(
-                "corprecon.crosser.insee.search_by_name",
+                "corprecon.crosser.annuaire.search_person_mandates",
                 side_effect=mock_name_search,
             ),
             patch("corprecon.crosser.asyncio.sleep", new_callable=AsyncMock),
